@@ -17,10 +17,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### Available endpoint
+### Available endpoints
 
 * <http://localhost:8000/images/>
+    * GET
+        * List all images
     * POST
-        * send an image in the body of the request
+        * Upload an Image.
+        * Requires "descricao" and "foto" on the requests' body
 
 ---
