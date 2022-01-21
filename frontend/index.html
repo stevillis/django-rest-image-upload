@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload de Imagem com Django REST Framework</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="display-column-center">
+        <h1>Upload de Imagem com Django REST Framework</h1>
+        <form id="form" method="post" action="/imagens/" class="display-column-center">
+            <div class="form-input">
+                <input type="text" placeholder="Nome da imagem" name="descricao" id="descricao" maxlength="60">
+
+                <div>
+                    <label for="foto" class="label-as-button">Carregar imagem</label>
+                    <input type="file" name="foto" id="foto">
+                </div>
+            </div>
+            <div class="input-submit">
+                <button type="submit" class="btn-submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Stévillis Sousa</p>
+        <ul class="social-network">
+            <li>
+                <a href="https://www.linkedin.com/in/stevillis/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/stevillis" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
