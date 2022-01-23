@@ -22,9 +22,10 @@ from rest_framework import routers
 from api.views import ImagemViewSet
 
 router = routers.DefaultRouter()
-router.register("imagens", ImagemViewSet)
+router.register("imagens", ImagemViewSet, basename="api")
 
 urlpatterns = [
     path("", include(router.urls)),
+    path("app", include("app.urls", namespace="app")),
     path("admin/", admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
