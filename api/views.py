@@ -67,7 +67,6 @@ class ImagemViewSet(viewsets.ModelViewSet):
 
         data = {
             "imagem": imagem,
-            "descricao": serializer.data.get("descricao", ""),
             "quantidade_gatos": quantidade_gatos,
         }
         return JsonResponse(data)

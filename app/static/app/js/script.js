@@ -17,14 +17,14 @@ function hideMessages() {
 
 function validateForm() {
   const file = inputImagem.files[0];
-  const descricao = file.name;
+  // const descricao = file.name;
 
   if (file) {
     imagemWaiting.style.display = "block";
 
     let data = new FormData();
     data.append("imagem", file);
-    data.append("descricao", descricao);
+    // data.append("descricao", descricao);
 
     fetch(`${baseUrl}/imagens/`, {
       method: "POST",
@@ -40,7 +40,7 @@ function validateForm() {
 
             imagemFromServer.style.display = "block";
             imagemFromServer.setAttribute("src", data.imagem);
-            imagemFromServer.setAttribute("descricao", data.descricao);
+            // imagemFromServer.setAttribute("alt", data.descricao);
 
             linkImagemFromServer.style.display = "block";
             if (quantidadeGatos > 0) {
