@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Imagem(models.Model):
-    descricao = models.CharField(max_length=30)
+    descricao = models.CharField(max_length=100)
     imagem = models.ImageField()
     data = models.DateTimeField(auto_now_add=True)
 
