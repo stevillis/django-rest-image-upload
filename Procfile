@@ -1,0 +1,1 @@
+web: gunicorn django_rest_image_upload.wsgi --log-file -
