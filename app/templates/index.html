@@ -24,23 +24,30 @@
 
 <body>
     <main class="display-column-center">
-        <h1>Upload de Imagem com Django REST Framework</h1>
+        <div>
+            <h1>Detector de Gatos</h1>
+            <p class="instruction">Selecione uma imagem que contenha gatos</p>
+        </div>
+
         <form id="form" class="display-column-center" autocomplete="off" onsubmit="return false;">
             {% csrf_token %}
             <div class="form-input">
                 <!-- <input type="text" placeholder="Nome da imagem" name="descricao" id="descricao" maxlength="60" required> -->
 
                 <div>
-                    <!-- <label for="foto" class="label-as-button">Carregar imagem</label> -->
-                    <input type="file" name="foto" id="foto" accept="image/png, image/jpeg" required>
+                    <!-- <label for="imagem" class="label-as-button">Carregar imagem</label> -->
+                    <input type="file" name="imagem" id="imagem" accept="image/png, image/jpeg" required>
                 </div>
             </div>
             <div class="input-submit">
                 <input type="submit" class="btn-submit" id="submit">
             </div>
-            <small>Ocorreu um erro ao enviar sua Foto. Por favor, selecione novamente.</small>
+            <small id="mensagemErro"></small>
         </form>
-        <img id="imageFromServer" class="img-result">
+        <img id="imagemWaiting" class="img-waiting"
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif">
+        <img id="imagemFromServer" class="img-result">
+        <a href="" id="linkImagemFromServer" target="_blank" class="link"></a>
     </main>
     <footer>
         <p>Stévillis Sousa</p>

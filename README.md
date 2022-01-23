@@ -24,6 +24,6 @@ python manage.py runserver
         * List all images
     * POST
         * Upload an Image.
-        * Requires "descricao" and "foto" on the requests' body
+        * Requires "descricao" and "imagem" on the requests' body
 
 ---

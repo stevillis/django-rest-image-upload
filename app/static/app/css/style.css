@@ -48,7 +48,7 @@ footer {
 }
 
 small {
-  font-size: 10px;
+  font-size: 14px;
   color: rgb(240, 56, 56);
 }
 
@@ -84,7 +84,7 @@ small {
 
 .input-submit {
   display: flex;
-  flex: row;
+  flex-direction: row;
   align-items: end;
   justify-content: center;
   width: 100%;
@@ -120,4 +120,26 @@ small {
 .img-result {
   height: auto;
   width: 350px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  color: var(--malachite-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.instruction {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.img-waiting {
+  height: auto;
+  width: 60px;
 }
