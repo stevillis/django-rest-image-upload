@@ -32,11 +32,7 @@ input[type="text"] {
   width: 300px;
 }
 
-input[type="file"] {
-  display: none;
-}
-
-button {
+input[type="submit"] {
   font-size: 1rem;
   padding: 6px;
   font-weight: 600;
@@ -49,6 +45,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+small {
+  font-size: 10px;
+  color: rgb(240, 56, 56);
 }
 
 .display-column-center {
@@ -114,4 +115,9 @@ footer {
   color: white;
   padding: 1.2rem 0;
   gap: 25px;
+}
+
+.img-result {
+  height: auto;
+  width: 350px;
 }

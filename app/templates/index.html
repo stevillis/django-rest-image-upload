@@ -25,19 +25,22 @@
 <body>
     <main class="display-column-center">
         <h1>Upload de Imagem com Django REST Framework</h1>
-        <form id="form" method="post" class="display-column-center">
+        <form id="form" class="display-column-center" autocomplete="off" onsubmit="return false;">
+            {% csrf_token %}
             <div class="form-input">
-                <input type="text" placeholder="Nome da imagem" name="descricao" id="descricao" maxlength="60" required>
+                <!-- <input type="text" placeholder="Nome da imagem" name="descricao" id="descricao" maxlength="60" required> -->
 
                 <div>
-                    <label for="foto" class="label-as-button">Carregar imagem</label>
+                    <!-- <label for="foto" class="label-as-button">Carregar imagem</label> -->
                     <input type="file" name="foto" id="foto" accept="image/png, image/jpeg" required>
                 </div>
             </div>
             <div class="input-submit">
-                <button type="submit" class="btn-submit">Enviar</button>
+                <input type="submit" class="btn-submit" id="submit">
             </div>
+            <small>Ocorreu um erro ao enviar sua Foto. Por favor, selecione novamente.</small>
         </form>
+        <img id="imageFromServer" class="img-result">
     </main>
     <footer>
         <p>Stévillis Sousa</p>
