@@ -73,6 +73,21 @@ function validateForm() {
   }
 }
 
+/*
+* Ao clicar no botão "Enviar", é feita uma requisição POST na rota imagens/
+* enviando a imagem selecionada no corpo da Requisição.
+*
+* Detectando ou não rostos de gatos na imagem enviada, será exibida uma imagem
+* redimensionada com largura de 350px abaixo do botão "Enviar" e um link para abrir a imagem
+* com tamanho original logo abaixo.
+*
+* Caso sejam detectados gatos nas imagens, a resposta HTTP terá o código 200 e a imagem exibida
+* mostrará os retângulos verdes em torno dos gatos.
+*
+* Se uma imagem não puder ser lida pela API, um erro 400 e uma mensagem de erro é exibida.
+*
+* Se a requisição for feita sem o envio da imagem, uma mensagem de erro também é exibida.
+* */
 inputsubmit.addEventListener("click", () => {
   hideMessages();
   validateForm();

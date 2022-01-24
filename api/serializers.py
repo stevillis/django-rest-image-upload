@@ -6,4 +6,4 @@ from api.models import Imagem
 class ImagemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Imagem
-        fields = ('imagem',)
+        fields = ("imagem",)
